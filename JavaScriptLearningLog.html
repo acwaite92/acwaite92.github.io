@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning JavaScript</title>
+    <script>
+        function headFunction1(){
+            document.getElementById("script2").innerHTML="This content was defined in the head"
+        }
+    </script>
+</head>
+<body>
+
+<h1>Learning Log</h1>
+
+<h2>1. Examples of what JavaScript can do</h2>
+
+    <h3>1.1. Change HTML content</h3>
+    
+        <h4>Example 1</h4>
+            <p id="changingContent">Initial content</p>
+            <button type="button" onclick='document.getElementById("changingContent").innerHTML = "Updated content! :D"'>
+            	Click here to change above content
+            </button>
+            
+        <h4>Example 2</h4>
+            <button type="button" onclick='document.getElementById("generatingContent").innerHTML = "Brand new content! Wowza!"'>
+            	Click here to generate some brand new content
+            </button>
+            <p id="generatingContent"></p>
+            <br/>
+
+<h2>2. Change HTML attribute values</h2>
+
+    <h3>2.1. Example 1: Changing the value of the source (src) attribute of an image</h3>
+        <button onclick="document.getElementById('myImage').src='spongebob1.png'">Spongebob</button>
+        <button onclick="document.getElementById('myImage').src='doodlebob.png'">Doodlebob</button>
+        <br/><br/>
+        <img id="myImage" style="height:200px">
+
+    <h3>2.2. Example 2: Changing the style of an HTML element</h3>
+        <p id="styleChange">Doodlebob is scary</p>
+        <button type="button" onclick="document.getElementById('styleChange').style.fontWeight='bold'">Emphasize the scariness</button>
+
+    <h3>2.3. Example 3: Hiding HTML elements</h3>
+        <p id='hideMe'>OMG hide me quick!</p>
+        <button type='button' onclick="document.getElementById('hideMe').style.display='none'">Hide the HTML content</button>
+
+    <h3>2.4. Example 4: Showing hidden HTML elements</h3>
+        <p>Who's ready?</p>
+        <button type="button" onclick="document.getElementById('showMe').style.display='block'">I'm ready!</button>
+        <br/><br/>
+        <img id="showMe" style="display:none;height:200px" src="spongebob1.png">
+        <br/>
+
+<h2>3. Script Tags and functions</h2>
+
+    <h3>2.1. Script tag</h3>
+        <p id="script1"></p>
+        <script>
+            document.getElementById("script1").innerHTML="This content is defined in JavaScript, not HTML"
+        </script>
+
+    <h3>2.2. Using a Function</h3>
+        
+        <h4>2.2.1. Function defined in the head</h4>
+            <p id="script2">This content was generated in the body</p>
+            <button type="button" onclick="headFunction1()">Use a function to change the HTML content to something defined in the head</button>
+
+        <h4>2.2.1. Function defined in the head</h4>
+            <p id="script3">Original content</p>
+            <button type="button" onclick="bodyfunction1()">Call a function</button>
+            <script>
+                function bodyfunction1() {
+                    document.getElementById("script3").innerHTML="Updated content"
+                }
+            </script>
+        
+    <h3 style="color:red">2.3. Next create an External JavaScript!</h3>
+        <a href="https://www.w3schools.com/js/js_whereto.asp">https://www.w3schools.com/js/js_whereto.asp</a>
+
+<br/>
+<img style='height:200px'>
+
+</body>
+</html>
